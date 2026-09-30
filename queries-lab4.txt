@@ -1,0 +1,39 @@
+Welcome to SWI-Prolog (threaded, 64 bits, version 10.0.2)
+SWI-Prolog comes with ABSOLUTELY NO WARRANTY. This is free software.
+Please run ?- license. for legal details.
+
+For online help and background, visit https://www.swi-prolog.org
+For built-in help, use ?- help(Topic). or ?- apropos(Word).
+
+40 ?- house = house.
+true.
+
+41 ?- house = abc.
+false.
+
+42 ?- edge(a,b) = edge(C,b).
+C = a.
+
+43 ?- edge(a,d) = edge(C,B).
+C = a,
+B = d.
+
+44 ?-  edge(C,B) = edge(a,d).
+C = a,
+B = d.
+
+45 ?- edge(A,f(g,h)) = edge(a,B).
+A = a,
+B = f(g, h).
+
+46 ?- edge(A,A) = edge(b,c).
+false.
+
+47 ?-  edge(A,A) = edge(b,b).
+A = b.
+
+48 ?- A = B, B = f.
+A = B, B = f.
+
+49 ?- A = B, B = f, A = e.
+false.
